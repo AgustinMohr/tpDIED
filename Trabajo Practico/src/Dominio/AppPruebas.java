@@ -107,22 +107,20 @@ public class AppPruebas {
 //		g.buscarCaminos(p1, p2).forEach(c -> c.Imprimir());
 //		g.buscarCaminos(p9, p2).forEach(c -> c.Imprimir());
 
-		//OK
-//		g.agregarIncidente(LocalDate.now().minusMonths(4), LocalDate.now().plusDays(1), "", p5); // 4 meses. 1
-//		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusDays(6), "Grave", p3); // 6 dias. 4
-//		g.agregarIncidente(LocalDate.now().minusDays(8), null, "Mala", p1); // 8 dias. 3
-//		g.agregarIncidente(LocalDate.now().minusDays(5), null, "Mala2", p2); // 5 dias. 5
-//		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusDays(4), "Bien", p8);// 4 dias. 6
-//		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusMonths(1), "Bien", p10); // 1 mes. 2
-//		g.agregarIncidente(LocalDate.now().minusMonths(7), LocalDate.now().plusDays(1), "", p6); // 4 meses. 1
-//			
-//		
+		// OK
+		g.agregarIncidente(LocalDate.now().minusMonths(4), LocalDate.now().plusDays(1), "", p5); // 4 meses. 1
+		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusDays(6), "Grave", p3); // 6 dias. 4
+		g.agregarIncidente(LocalDate.now().minusDays(8), null, "Mala", p1); // 8 dias. 3
+		g.agregarIncidente(LocalDate.now().minusDays(5), null, "Mala2", p2); // 5 dias. 5
+		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusDays(4), "Bien", p8);// 4 dias. 6
+		g.agregarIncidente(LocalDate.now(), LocalDate.now().plusMonths(1), "Bien", p10); // 1 mes. 2
+		g.agregarIncidente(LocalDate.now().minusMonths(7), LocalDate.now().plusDays(1), "", p6); // 4 meses. 1
+		g.agregarIncidente(LocalDate.now(), LocalDate.now().minusDays(1), "", p12);
+
 //		ReporteIncidencias reporte = g.generarReporte();
 //
 //		System.out.println(reporte.vaciar());
-		
-		
-		
+
 	}
 
 }

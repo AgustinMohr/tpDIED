@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
+import Exceptions.FechaIncidenteException;
+
 public class Gestor {
 
 	private ArrayList<Linea> listaLineas;
@@ -48,8 +50,8 @@ public class Gestor {
 //			e.printStackTrace();
 //		}
 		try {
-			if(f != null && LocalDate.parse(f).isBefore(inicio)) throw new Exception("La fecha de inicio debe ser anterior a la fecha de fin");
-		} catch (Exception e) {
+			if(f != null && LocalDate.parse(f).isBefore(inicio)) throw new FechaIncidenteException("La fecha de inicio debe ser anterior a la fecha de fin");
+		} catch (FechaIncidenteException e) {
 			e.printStackTrace();
 		}
 		this.listaIncidentes.add(new Incidente(inicio, LocalDate.parse(f), s, p));
@@ -68,8 +70,8 @@ public class Gestor {
 //			e.printStackTrace();
 //		}
 		try {
-			if(fin != null && fin.isBefore(inicio)) throw new Exception("La fecha de inicio debe ser anterior a la fecha de fin");
-		} catch (Exception e) {
+			if(fin != null && fin.isBefore(inicio)) throw new FechaIncidenteException("La fecha de inicio debe ser anterior a la fecha de fin");
+		} catch (FechaIncidenteException e) {
 			e.printStackTrace();
 		}
 		
@@ -218,5 +220,31 @@ public class Gestor {
 
 		return listaIncidentes;
 	}
+
+	public ArrayList<Linea> getListaLineas() {
+		return listaLineas;
+	}
+
+	public void setListaLineas(ArrayList<Linea> listaLineas) {
+		this.listaLineas = listaLineas;
+	}
+
+	public Trayecto getListaCaminos() {
+		return listaCaminos;
+	}
+
+	public void setListaCaminos(Trayecto listaCaminos) {
+		this.listaCaminos = listaCaminos;
+	}
+
+	public ArrayList<Parada> getListaParadas() {
+		return listaParadas;
+	}
+
+	public void setListaParadas(ArrayList<Parada> listaParadas) {
+		this.listaParadas = listaParadas;
+	}
+	
+	
 
 }

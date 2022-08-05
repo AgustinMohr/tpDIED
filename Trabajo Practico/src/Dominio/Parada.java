@@ -18,6 +18,12 @@ public class Parada {
 		contador++;
 	}
 
+	public Parada() {
+		super();
+		this.nroParada = contador;
+		contador++;
+	}
+
 	public boolean equals(Parada p) {
 		if(p.getNroParada() == this.nroParada)
 			return true;
